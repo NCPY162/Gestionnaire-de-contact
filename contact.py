@@ -155,8 +155,9 @@ class GestionnaireDeContact:
             self.saveInFile()
             print("Modification réussie !")
         else:
-            print("Le numéro saisi n'existe pas!")     
+            print("Le numéro saisi n'existe pas!") 
 
+    # supprimer un contact
     def supprimerContact(self):
         tel = int(input("Quel est le numéro de téléphone du contact à supprimer ? : "))
         contact = next((contact for contact in self.contacts if contact.telephone == tel), None)
